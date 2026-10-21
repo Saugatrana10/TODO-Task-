@@ -26,10 +26,9 @@ import os
 SECRET_KEY = os.environ.get("SECRET_KEY", "dev-key")
 DEBUG = os.environ.get("DEBUG") == "True"
 
-ALLOWED_HOSTS = ["localhost", "127.0.0.1"]
+ALLOWED_HOSTS = ["localhost", "127.0.0.1", ".onrender.com"]
 if os.environ.get("RENDER_EXTERNAL_HOSTNAME"):
     ALLOWED_HOSTS.append(os.environ["RENDER_EXTERNAL_HOSTNAME"])
-
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True

@@ -156,7 +156,7 @@ REST_FRAMEWORK = {
 CORS_ALLOWED_ORIGINS = [
     "http://localhost:5173",
     "http://127.0.0.1:5173",
-    "https://todo-task-eocq.onrender.com",
+    "https://todo-task-4-hyn4.onrender.com",
 ]
 
 from datetime import timedelta

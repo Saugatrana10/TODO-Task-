@@ -16,8 +16,8 @@ from pathlib import Path
 BASE_DIR = Path(__file__).resolve().parent.parent
 
 
-
 import os
+import dj_database_url
 
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/6.1/howto/deployment/checklist/
@@ -26,16 +26,12 @@ import os
 SECRET_KEY = os.environ.get("SECRET_KEY", "dev-key")
 DEBUG = os.environ.get("DEBUG") == "True"
 
+
+# SECURITY WARNING: don't run with debug turned on in production!
 ALLOWED_HOSTS = ["localhost", "127.0.0.1", ".onrender.com",]
 if os.environ.get("RENDER_EXTERNAL_HOSTNAME"):
     ALLOWED_HOSTS.append(os.environ["RENDER_EXTERNAL_HOSTNAME"])
 
-# SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
-
-ALLOWED_HOSTS = []
-
-import dj_database_url
 
 # Application definition
 
@@ -49,6 +45,7 @@ INSTALLED_APPS = [
     "rest_framework",
     "Apps",
     "corsheaders",
+    "django_filters",
 ]
 
 MIDDLEWARE = [
@@ -128,6 +125,7 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/6.1/howto/static-files/
 
 STATIC_URL = "static/"
+STATIC_ROOT = BASE_DIR / "staticfiles"
 
 
 # Email

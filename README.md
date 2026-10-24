@@ -18,7 +18,7 @@ A full-stack todo app built with Django REST Framework and React. Users register
 
 - **Backend:** Django, Django REST Framework, SimpleJWT
 - **Frontend:** React (Vite), Bootstrap
-- **Database:** SQLite locally, PostgreSQL in production
+- **Database:** SQLite locally
 - **Hosting:** Render
 
 ## API endpoints
